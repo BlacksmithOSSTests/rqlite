@@ -34,7 +34,7 @@ jobs:
           platforms: ${{ matrix.platform }}
           labels: ${{ steps.meta.outputs.labels }}
           outputs: type=image
-          file: ./Dockerfile
+          context: .
           build-args: |
             VERSION=${{ github.event.release.tag_name }}
             COMMIT=${{ github.sha }}
