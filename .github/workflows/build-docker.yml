@@ -28,7 +28,7 @@ jobs:
           platforms: ${{ matrix.platform }}
           labels: ${{ steps.meta.outputs.labels }}
           outputs: type=image
-          context: .
+          context: ./
           build-args: |
             VERSION=${{ github.event.release.tag_name }}
             COMMIT=${{ github.sha }}
